@@ -2,13 +2,12 @@
 
 // Basis
 const themeBody = document.body;
-console.log(themeBody);
-
+const containerForFlex = document.createElement('div')
 
 const div = document.createElement('div');
 div.classList.add('main-container');
-themeBody.prepend(div);
-console.log(div);
+themeBody.prepend(containerForFlex)
+containerForFlex.prepend(div)
 // Basis end
 // Header
 const header = document.createElement('div');
@@ -104,6 +103,7 @@ const secondRadioInnerContainer = firstRadioInnerContainer.cloneNode();
 secondContainer.append(secondRadioInnerContainer);
 const inputUserSeller = document.createElement('input');
 inputUserSeller.setAttribute('type', 'radio');
+inputUserSeller.setAttribute('name', 'radio');
 inputUserSeller.setAttribute('id', 'user-seller');
 secondRadioInnerContainer.append(inputUserSeller);
 const labelUserSeller = document.createElement('label');
